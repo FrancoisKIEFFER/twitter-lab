@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <% include ../partials/head %>
+
+  <title>Ironhack Twitter</title>
+</head>
+<body>
+  <div id="container">
+    <img src="/images/twitter-logo.png" 
+         class="header-logo">
+<div>
+  <% if (!user) { %>
+    <a href="/signup">Sign up</a>
+    <a href="/login">Login</a>
+  <% } else { %>
+    <a href="/tweets">Hi @<%= user.username %></a>
+    <a href="/logout">Logout</a>
+  <% } %>
+
+</div>
+    <%- body %>
+  </div>
+</body>
+</html>
